@@ -1,3 +1,5 @@
+; Print a single character
+
 .MODEL SMALL
 
 .STACK 100H

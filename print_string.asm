@@ -1,17 +1,19 @@
+; Print a string 'Hello World'
+
 .MODEL SMALL
 
 .STACK 100H
 
 .DATA
-    NUMBER DB 'A'
+    STR DB 'Hello World$'
 
 .CODE
 MAIN PROC 
     MOV AX,@DATA
     MOV DS,AX
     
-    MOV AH,2
-    MOV DL,NUMBER
+    MOV AH,9
+    LEA DX,STR
     INT 21H
     
     MOV AH,4CH
